@@ -2,29 +2,31 @@ package app;
 
 public class PrimeiraClasse {
     public static void main(String[] args) {
+
         Aluno a1 = new Aluno();
-        a1.setNome("Ramon");
-        a1.setIdade(19);
+        a1.setId(1);
+        a1.setNome("Marco");
+        a1.setIdade(45);
 
         System.out.println(a1.getNome());
-        System.out.println(a1.getIdade());
-        
-        System.out.println("Olá, Gradle!!!");
+
 
         Tarefa t1 = new Tarefa();
-        t1.setDescricao("Estudar Estrutura de Dados");
+        t1.setDescricao("Estudar Estruturas de Dados");
         t1.setConcluido(true);
 
         Tarefa t2 = t1;
-        t2.setConcluido(false);
+        t2.setDescricao("Exemplo de Tarefa");
 
         System.out.println(t1.getDescricao());
-        System.out.println(t1.isConcluido());
+        System.out.println(t2.getDescricao());
 
-        Atividade[] objetos = new Atividade[3];
+        List<Atividade> agenda = new ArrayList<Atividade>();
+        agenda.add(t1);
+        Compromisso c1 = new Compromisso();
+        agenda.add(c1); 
 
-        objetos[0] = new Compromisso;
-        objetos[1] = new Tarefa();
+        System.out.println(t1);
 
     }
 }

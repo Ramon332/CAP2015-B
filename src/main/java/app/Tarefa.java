@@ -7,14 +7,10 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class Tarefa extends Atividade{
-    private boolean isConcluido; //boolean significa verdadeiro/falso
+    private boolean isConcluido;
 
-    public Tarefa(String descricao, boolean isConcluido){
-        this.setDescricao(descricao);
-        this.setConcluido(isConcluido);
-
-    }
-    public String getDetalhes() {
+    @Override
+    public String toString() {
         return this.getDescricao() + "(" + this.isConcluido() + ")";
     }
 }
